@@ -12,6 +12,7 @@ def optimser(file: str, new_name: str) -> None:
     with open(file, "r") as f:
         file = []
         lines = f.readlines()
+        file.append("import gc\n")
         for i, line in enumerate(lines):
             if i < len(lines) - 1:
                 file.append(line)
